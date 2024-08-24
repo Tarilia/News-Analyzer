@@ -13,20 +13,53 @@ When developing the model, TfidfVectorizer was used to extract features from tex
 - make run
 
 ### Visualization:
-[![image.png](https://i.postimg.cc/DzLBGzwC/image.png)](https://postimg.cc/bGYxcpbb)
+#### Let's analyze the data set and build a classic machine learning model that can determine with more than 90% accuracy whether the news is real or fake. Visualize the results and generate a report.
 
-We visualize the ratio of labels, REAL and FAKE
+#### Downloading and analyzing the dataset
+- looking through the first ten entries
 
-[![1.png](https://i.postimg.cc/Y978zw4t/1.png)](https://postimg.cc/B8hxJkcz)
+[![image.png](https://i.postimg.cc/sgC885d1/image.png)](https://postimg.cc/hfMpQzGq)
 
-We visualize text length distributions in the dataset: REAL and FAKE
+- studying the data structure
 
-[![2.png](https://i.postimg.cc/W3789frg/2.png)](https://postimg.cc/njCqr23h)
+[![image.png](https://i.postimg.cc/x1G7Sqn5/image.png)](https://postimg.cc/Wd3SGNDq)
 
-[![image.png](https://i.postimg.cc/3rn9mV3H/image.png)](https://postimg.cc/hhQ9qCJC)
+- check for any null values
 
-Visualize confusion matrix
+[![image.png](https://i.postimg.cc/LsHW4Rsp/image.png)](https://postimg.cc/pm6Ckw8G)
 
-[![3.png](https://i.postimg.cc/j2dXBQQ9/3.png)](https://postimg.cc/jwmP7f1Q)
+#### Visualization:
+- the ratio of labels, REAL and FAKE
 
-[![image.png](https://i.postimg.cc/kG1cC6T5/image.png)](https://postimg.cc/4HctbdkC)
+[![1.png](https://i.postimg.cc/3NP63vkS/1.png)](https://postimg.cc/0K0ZfrdD)
+
+- text length distributions in the dataset: REAL and FAKE
+
+[![2.png](https://i.postimg.cc/65vgYYPD/2.png)](https://postimg.cc/gnGg0qmD)
+
+#### Building a classical machine learning model using TfidfVectorizer and PassiveAggressiveClassifier, predicting on a test set and calculating accuracy
+```
+10 important words for text classification:
+said: 4.73
+says: 3.27
+marriage: 2.77
+conservative: 2.75
+friday: 2.64
+gop: 2.51
+tuesday: 2.39
+rush: 2.37
+march: 2.29
+sanders: 2.25
+```
+
+```
+Accuracy based on test data: 92.98%
+```
+
+#### Building an сonfusion matrix
+
+[![u4.png](https://i.postimg.cc/wxPnXSwX/u4.png)](https://postimg.cc/V5q71HQv)
+
+#### Classification report
+
+[![jnxth.png](https://i.postimg.cc/VvSpyRk0/jnxth.png)](https://postimg.cc/hQBpTVxK)
